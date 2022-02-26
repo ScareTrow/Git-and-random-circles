@@ -37,7 +37,7 @@ class YellowCirclesWidget(QMainWindow):
             for circle in self.ellipses[:-1]:
                 pen = QPen(QColor(random.randint(0, 255), random.randint(0, 255),
                     random.randint(0, 255)))
-                pen.setWidth(circle[-1])
+                pen.setWidth(circle[random.randint(-1, 1)])
                 qp.setPen(pen)
                 qp.drawEllipse(*circle[:-1], circle[-2])
             qp.end()
